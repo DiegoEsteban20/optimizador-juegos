@@ -100,6 +100,11 @@ if ($Restaurar) {
 
     $reabiertas = 0
     foreach ($app in $estado.cerradas) {
+        # Si ya está abierto (por ejemplo arrancó solo tras un reinicio), no lo abre de nuevo
+        if (@(Get-Process -Name $app.nombre -ErrorAction SilentlyContinue).Count -gt 0) {
+            Write-Host "  $($app.nombre) ya estaba abierto" -ForegroundColor DarkGray
+            continue
+        }
         if ($app.ruta -and (Test-Path $app.ruta)) {
             try {
                 Start-Process -FilePath $app.ruta -ErrorAction Stop

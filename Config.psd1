@@ -2,7 +2,7 @@
     # ===== Aplicaciones que se cierran al optimizar =====
     # Pon el nombre del proceso SIN ".exe". Agrega o quita a tu gusto.
     AppsACerrar = @(
-        'Discord', 'Spotify', 'SpotifyWebHelper',
+        'Spotify', 'SpotifyWebHelper',
         'Slack', 'Teams', 'ms-teams',
         'WhatsApp', 'Telegram', 'skype',
         'OneDrive', 'Dropbox', 'GoogleDriveFS',
@@ -29,6 +29,7 @@
         'explorer', 'dwm', 'csrss', 'winlogon', 'wininit', 'services', 'lsass',
         'svchost', 'system', 'smss', 'fontdrvhost', 'sihost', 'taskhostw',
         'steam', 'steamwebhelper',
+        'Discord',   # lo usas para jugar: nunca se cierra
         'powershell', 'pwsh', 'windowsterminal', 'cmd', 'conhost',
         'MsMpEng', 'SecurityHealthService', 'NisSrv'
     )
